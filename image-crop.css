@@ -1,0 +1,88 @@
+/* Some of these styles you can override, things like colors,
+ * however some styles are required for the structure, and are critical to this module behaving properly!
+ */
+
+/* Core component styles */
+.ng-image-crop {
+  	text-align: center;
+  	margin: 0 auto;
+  	position: relative;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	-o-user-select: none;
+  	user-select: none;
+}
+/* Each of the 3 steps in the process are contained within sections */
+.ng-image-crop > section {
+  	background: #A9A9A9;
+  	text-align: center;
+}
+
+.btn-file {
+	margin-top:10px;
+    overflow: hidden;
+  	margin-right: auto;
+  	position:relative;
+}
+
+.btn-file input[type=file] {
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+/* The dashed cropping guideline */
+.ng-image-crop .cropping-guide {
+  	display: block;
+  	border: 2px dashed white;
+  	position: absolute;
+ 	pointer-events: none;
+}
+/* The circular themed cropping guideline */
+.ng-image-crop--circle .cropping-guide {
+  	-webkit-border-radius: 50%;
+  	-moz-border-radius: 50%;
+  	-ms-border-radius: 50%;
+  	-o-border-radius: 50%;
+    border-radius: 50%;
+
+}
+/* The canvas where the user positions the image via dragging and zooming */
+.ng-image-crop .cropping-canvas {
+  	margin: 0 auto;
+  	cursor: move;
+  	display: block;
+}
+
+.ng-image-crop .zoom-btn {
+  	display: block;
+  	position: absolute;
+  	top: 5px;
+  	width: 40px;
+  	height: 40px;
+  	cursor: pointer;
+  	background: rgb(255, 255, 255);
+  	background :rgba(255,255,255, 0.5);
+  	border: 2px solid;
+  	border-radius: 40px;
+  	color: white;
+  	font-size: 26px;
+}
+
+.ng-image-crop .zoom-btn-plus {
+  	left: 10px;
+  	padding: 2px 4px 3px 6px;
+}
+
+.ng-image-crop .zoom-btn-minus {
+  	left: 60px;
+  	padding: 2px 6px 3px 4px;
+}
+.ng-image-crop .zoom-btn-rotate {
+  	left: 110px;
+  	padding: 2px 6px 3px 4px;
+}
